@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/app.css" />
     <script src='phonegap.js'></script>
      
-	<style>
+    <style>
 	    .descrizione p
 	    {
 	        font-size:12pt;
@@ -49,7 +49,7 @@
             <br><br>
             <!--
             <a href="javascript:loadURL('http://www.sinergoservizi.it/portale/analisi/iscrizione_corsi/iscrizione.asp');" class="btn_iscri_corsi">ISCRIZIONE CORSI</a>-->
-            <a href="#" onClick="window.open('http://www.sinergoservizi.it/portale/analisi/iscrizione_corsi/iscrizione.asp','_system','location=yes');return false;" class="link btn_iscri_corsi">ISCRIZIONE CORSI</a>
+            <!--<a href="#" onClick="window.open('http://www.sinergoservizi.it/portale/analisi/iscrizione_corsi/iscrizione.asp','_system','location=yes');return false;" class="link btn_iscri_corsi">ISCRIZIONE CORSI</a>-->
             <br><br>
             <div class="view-animate-container">
                 <div ng-view  ng-class="{slide: true, left: isDownwards, right: !isDownwards}" id="content"></div>
@@ -123,7 +123,7 @@
             var idCorso = getParameterByName("idCorso");
 
 
-            $.getJSON("http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergoapp/get_corsi.asp?idCorso=" + idCorso, function (info) {
+            $.getJSON("http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergoapp/get_promo.asp?idPromo=" + idCorso, function (info) {
                 var dettaglio = "";
                 for (var i = 0; i < info.length; i++) {
                     dettaglio = "";
@@ -131,20 +131,24 @@
                     if (info[i].titolo != "") {
                         dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='margin-bottom:20px;'><h2 class='article_title' style='color:#750101'> " + info[i].titolo + "</h2></div>";
                     }
-                    if (info[i].oscurato == "si") {
-                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'><h6> da programmare </h6></div>";
-                    }
                     if (info[i].immagine1 != "") {
                         dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'> <img  style='margin:0 auto' src='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].immagine1 + "' class='img-responsive'/></div>";
                     }
                     if (info[i].descrizione != "") {
-                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 descrizione' >" + info[i].descrizione + "</div>";
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 descrizione'>" + info[i].descrizione + "</div>";
                     }
 
                     if (info[i].pdf != "") {
                         dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
                         //                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:11pt;' href='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].pdf + "'><img src='icona-pdf.png' style='width:35px; float:left;' class='img-responsive'> Scarica il PDF</a></div>";
                         dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:10pt; color:#fff;background-color: #750101;  padding: 10px;    border-radius: 5px;' href='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].pdf + "'>Scarica il PDF</a></div>";
+                        dettaglio += "</div>";
+                    }
+
+                    if (info[i].link != "") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>";
+                        //                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:11pt;' href='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].pdf + "'><img src='icona-pdf.png' style='width:35px; float:left;' class='img-responsive'> Scarica il PDF</a></div>";
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12' style='padding-top:25px;'><a style='font-size:10pt; color:#fff;background-color: #750101;  padding: 10px;    border-radius: 5px;' href='" + info[i].link + "'>Scopri di pi&ugrave;</a></div>";
                         dettaglio += "</div>";
                     }
                                       

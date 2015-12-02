@@ -21,11 +21,20 @@
 </head>
 
 <body >	
-    <div ng-controller="MainCntl" data-role="page" >
-        <div data-ng-include="'partials/nav.html'"></div>
+
+    
+    
+    <div ng-controller="MainCntl" data-role="page" class="ng-scope">
+        <!-- ngInclude: 'partials/nav.html' -->
+        <div data-ng-include="'partials/nav.html'" class="ng-scope"></div>
         <div class="container">
-        	<div data-role="header" data-ng-include="'partials/header.html'" style="width:100%;"></div>
-        	
+            <!-- ngInclude: 'partials/header.html' -->
+        	<div data-role="header" data-ng-include="'partials/header.html'" style="width:100%;" class="ng-scope"></div>
+        	<div id="banner" style="margin-bottom: 30px;">
+                
+            </div>
+
+
             <div class="view-animate-container" data-role="main" >
             
             	<div class="btn1 btn_menu"><a href="#" onClick="window.open('http://www.sinergoservizi.it/portale/analisi/solologin.asp','_system','location=yes');return false;" class="link">Accesso analisi</a></div>
@@ -48,9 +57,9 @@
 -->
             </div>
 
-			<div data-role="footer" data-ng-include="'partials/footer.html'"></div>
+			<div data-role="footer" data-ng-include="'partials/footer.html'" class="ng-scope"></div>
         </div>
-    </div>
+   
 
 
 
@@ -94,6 +103,24 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+    </script>
+
+      <script>
+
+          $(document).ready(function () {
+
+              $.getJSON("http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergoapp/get_banner.asp", function (info) {
+                  for (var i = 0; i < info.length; i++) {
+                      var anchor = "<a href='" + info[i].link + "' class=''>" + "<h3 class='caption_left'>" + "</h3>" + "<img  style='max-width:100%' src='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].immagine1 + "'/>" + "</a>";
+                      $("#banner").append(anchor);
+                  }
+
+              });
+
+
+          })
+				
+			
     </script>
 
 </body>
