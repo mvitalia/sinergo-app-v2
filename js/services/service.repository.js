@@ -4,8 +4,8 @@ angular.module('App.service.repository', [])
             return {
                 data: [],
                 status: '',
-                method: 'GET',                
-               url: 'http://www.sinergoservizi.com/get_corsi.asp',
+                method: 'GET',
+                url: 'http://pipes.yahoo.com/pipes/pipe.run?_id=581c911b1251acb1f2a6515d2f99f55b&_render=json&feedcount=10&feedurl=http://www.sinergoservizi.com/index.php?option=com_content&amp;view=category&amp;id=43%3Acorsi-in-programma&amp;Itemid=61&amp;layout=default&amp;format=feed&amp;type=rss',
 
                 emptyData: function () {
                     this.data = [];
