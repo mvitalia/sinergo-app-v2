@@ -103,7 +103,7 @@
   	$(document).ready(function () {
 	      	$.getJSON("http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergoapp/get_banner.asp", function (info) {
 			for (var i = 0; i < info.length; i++) {
-	                      var anchor = "<a href='" + info[i].link + "'>" + "<h3 class='caption_left'>" + "</h3>" + "<img  style='max-width:100%' src='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].immagine1 + "'/>" + "</a>";
+	                      var anchor = "<a href='#' onClick="window.open('" + info[i].link + ','_system','location=yes');return false;">" + "<h3 class='caption_left'>" + "</h3>" + "<img  style='max-width:100%' src='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].immagine1 + "'/>" + "</a>";
 	                      $("#banner").append(anchor);
 			}
 		});
