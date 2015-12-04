@@ -140,8 +140,8 @@
                     if (info[i].titolo != "") {
                         dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 titoloDettaglio'><h2 class='article_title' style='color:#750101'> " + info[i].titolo + "</h2></div>";
                     }
-                     if (info[i].oscurato != "si") {
-                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 '><h6 class='article_title' style='color:#750101'>Da programmare</h6></div>";
+                     if (info[i].oscurato == "si") {
+                        dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 '><h6 class='article_title' style='color:#750101'>da programmare</h6></div>";
                     }
                     if (info[i].immagine1 != "") {
                         dettaglio += "<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 immagineDettaglio'> <img  style='margin:0 auto' src='http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergo/public/upload_gallery/immagini/" + info[i].immagine1 + "' class='img-responsive'/></div>";
