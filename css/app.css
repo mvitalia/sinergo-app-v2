@@ -279,3 +279,23 @@ footer {
 .caption_left {
 	max-width:80%;
 }
+
+@media(min-width:1400px){
+	.navbar-toggle .icon-bar {
+		margin: 0 auto;
+	}
+	
+		.navbar-toggle .icon-bar:first {
+		margin-top:17px;
+	}
+	
+	.navbar-toggle{
+		width:80px;
+		height:80px;
+	}
+}
+
+.navbar-toggle{
+	border: 1px solid #fff;
+	
+}
