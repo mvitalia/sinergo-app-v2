@@ -261,3 +261,7 @@ footer {
 	    margin-top: 10px !important;
 	}
 }
+
+.caption_left {
+	max-width:80%;
+}
