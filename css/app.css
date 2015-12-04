@@ -283,7 +283,7 @@ footer {
 @media(min-width:1025px){
 	.navbar-toggle .icon-bar {
 		margin: 0 auto;
-		width:65px !important;
+		width:35px !important;
 		height:7px !important;
 	}
 	
@@ -300,5 +300,5 @@ footer {
 }
 
 .navbar-toggle{
-	border: 7px solid white !important;
+	border: 1px solid white !important;
 	}
