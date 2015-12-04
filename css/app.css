@@ -235,6 +235,11 @@ footer {
 	  	
 	  	.testoFooter{
 	  		font-size:20pt !important;
+	  		
+	  	}
+	  	
+	  	.testoFooter a{
+	  		font-size:20pt !important;
 	  	}
 	    }
 	  
