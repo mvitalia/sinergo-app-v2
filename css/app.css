@@ -248,3 +248,11 @@ footer {
 	 body{
 	 	margin-top: 50px !important;
 	 }
+
+@media (max-width: 768px){
+.caption_left {
+    width: 70%;
+    font-size: 11pt;
+    margin-top: 10px !important;
+}
+}
