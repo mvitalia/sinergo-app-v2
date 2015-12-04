@@ -281,6 +281,14 @@ footer {
 }
 
 @media(min-width:1025px){
+	.dropdown-menu>li>a{
+		font-size:25pt !important;
+		
+	}
+	.dropdown-menu>li{
+	padding:15px 10px;
+		
+	}
 	.navbar-toggle .icon-bar {
 		margin: 0 auto;
 		width:35px !important;
