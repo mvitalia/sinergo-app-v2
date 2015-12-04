@@ -280,7 +280,7 @@ footer {
 	max-width:80%;
 }
 
-@media(min-width:1400px){
+@media(min-width:1025px){
 	.navbar-toggle .icon-bar {
 		margin: 0 auto;
 	}
