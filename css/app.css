@@ -255,9 +255,9 @@ footer {
 	 }
 
 @media (max-width: 768px){
-.caption_left {
-    width: 70%;
-    font-size: 11pt;
-    margin-top: 10px !important;
-}
+	.caption_left {
+	    width: 70% !important;
+	    font-size: 11pt !important;
+	    margin-top: 10px !important;
+	}
 }
