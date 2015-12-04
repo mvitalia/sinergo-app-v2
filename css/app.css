@@ -246,6 +246,11 @@ footer {
 	  		height: 80px !important;
 	  		line-height: 40px;
 	  	}
+	  	
+	  	.caption_left{
+	  		margin-top:0 !important;
+	  		
+	  	}
 	    }
 	  
 	  .immagineDettaglio{
