@@ -241,6 +241,11 @@ footer {
 	  	.testoFooter a{
 	  		font-size:20pt !important;
 	  	}
+	  	
+	  	#articles .post{
+	  		height: 80px !important;
+	  		line-height: 40px;
+	  	}
 	    }
 	  
 	  .immagineDettaglio{
