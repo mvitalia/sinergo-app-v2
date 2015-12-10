@@ -108,7 +108,7 @@
     </script>
 	<script>
         $(document).ready(function () {
-             $.getJSON("http://www.mvitalia.com/dimostrativi/patrizia/alex/sinergoapp/get_promo.asp", function (info) {
+             $.getJSON("http://www.sinergoservizi.com/get_promo.asp", function (info) {
                 for (var i = 0; i < info.length; i++) {
                     var anchor = "<a href='dettaglioPromo.html?idPromo=" + info[i].ID + "' class='scelta_telefono article_title post'>" + "<h3 class='caption_left'>" + info[i].titolo + "</h3>" + "<div class='btn btn-primary btn_leggi'> Continua </div>" + "</a>"
                     $("#articles").append(anchor);
