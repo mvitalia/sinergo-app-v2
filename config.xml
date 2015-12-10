@@ -72,8 +72,8 @@
 	
 	<!--Plugins-->
 	<gap:plugin name="org.apache.cordova.inappbrowser"  />
-	
-	<access origin="*" />
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
+	<access origin="*"/>
 
 </widget>
 
