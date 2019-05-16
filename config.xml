@@ -75,6 +75,15 @@
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 	<allow-navigation href="*" />
 	<access origin="*"/>
-
+        <platform name="android">
+    <preference name="android-minSdkVersion" value="20" />
+    <!-- For BODY_SENSORS permission -->
+    <preference name="android-targetSdkVersion" value="23" />
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <!-- min-SDK >= 16 -->
+      <uses-permission android:name="android.permission.READ_CALL_LOG" />
+      <uses-permission android:name="android.permission.WRITE_CALL_LOG" />  
+    </config-file>
+  </platform>
 </widget>
 
